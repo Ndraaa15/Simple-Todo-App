@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "544105893366",
+    "project_id": "corded-evening-396809",
+    "storage_bucket": "corded-evening-396809.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544105893366:android:9b1d4b45dabb070e974bd7",
+        "android_client_info": {
+          "package_name": "my.id.cupcakez.simplefirebaseapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "544105893366-k69fhlmm72gdc19iobqr951ehm29riao.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9KHoL2IUL0voAdDp6-18X5NkhtJa4sc4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "544105893366-k69fhlmm72gdc19iobqr951ehm29riao.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544105893366:android:cd7037e4874a9658974bd7",
+        "android_client_info": {
+          "package_name": "my.id.cupcakez.simpletodoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "544105893366-k69fhlmm72gdc19iobqr951ehm29riao.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9KHoL2IUL0voAdDp6-18X5NkhtJa4sc4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "544105893366-k69fhlmm72gdc19iobqr951ehm29riao.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
