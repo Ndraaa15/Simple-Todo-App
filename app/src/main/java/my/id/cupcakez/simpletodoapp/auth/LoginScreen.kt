@@ -38,6 +38,10 @@ fun LoginScreen(navController: NavController) {
             .padding(16.dp),
         verticalArrangement = Arrangement.Center
     ) {
+        Text(
+            text = "Login",
+            style = MaterialTheme.typography.headlineLarge
+        )
         TextField(
             value = email,
             onValueChange = { email = it },

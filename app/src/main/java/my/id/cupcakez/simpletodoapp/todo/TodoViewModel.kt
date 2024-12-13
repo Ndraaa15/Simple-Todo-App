@@ -27,7 +27,7 @@ class TodoViewModel @Inject constructor(
         checkUserAuthentication()
         if (_isUserLoggedIn.value) {
             viewModelScope.launch {
-                repository.getTodos().collect { _todos.value = it }
+                repository.getTodos(auth.currentUser?.uid ?: return@launch).collect { _todos.value = it }
             }
         }
     }
@@ -38,6 +38,7 @@ class TodoViewModel @Inject constructor(
 
     fun addOrUpdate(todo: Todo) {
         viewModelScope.launch {
+            todo.userID = auth.currentUser?.uid ?: return@launch
             repository.addOrUpdateTodo(todo)
         }
     }

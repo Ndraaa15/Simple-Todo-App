@@ -71,7 +71,7 @@ fun UserScreen(
                 verticalArrangement = Arrangement.Center
             ) {
                 AsyncImage(
-                    model = "https://firebasestorage.googleapis.com/v0/b/corded-evening-396809.appspot.com/o/simple-todo-app%2F6AOctPHSYYbQQg3vXVblXRMke3f1.jpg?alt=media&token=89d92364-a447-4b73-8e04-4064ee0cd1dd",
+                    model = loggedInUser.photoProfile,
                     contentDescription = "Profile Picture",
                     modifier = Modifier
                         .size(128.dp)

@@ -2,8 +2,10 @@ package my.id.cupcakez.simpletodoapp.todo
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
@@ -75,22 +77,32 @@ fun TodoScreen(
             }
         }
     ) {
-        LazyColumn(modifier = Modifier.fillMaxSize().padding(it)) {
-            items(todos) { todo ->
-                TodoItem(
-                    todo = todo,
-                    onEdit = {
-                        currentTodo = it
-                        showDialog = true
-                    },
-                    onDelete = {
-                        currentTodo = it
-                        showDeleteConfirmation = true
-                    },
-                    onCheck = { updatedTodo ->
-                        viewModel.addOrUpdate(updatedTodo)
-                    }
-                )
+        Column(modifier = Modifier.fillMaxSize().padding(it)) {
+            Text(
+                text = "Todo List",
+                style = MaterialTheme.typography.headlineLarge,
+                modifier = Modifier.padding(16.dp)
+            )
+
+            Spacer(modifier = Modifier.height(24.dp)) // Add extra space after the title
+
+            LazyColumn(modifier = Modifier.fillMaxSize()) {
+                items(todos) { todo ->
+                    TodoItem(
+                        todo = todo,
+                        onEdit = {
+                            currentTodo = it
+                            showDialog = true
+                        },
+                        onDelete = {
+                            currentTodo = it
+                            showDeleteConfirmation = true
+                        },
+                        onCheck = { updatedTodo ->
+                            viewModel.addOrUpdate(updatedTodo)
+                        }
+                    )
+                }
             }
         }
 

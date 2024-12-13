@@ -11,8 +11,8 @@ import javax.inject.Inject
 class TodoRepository @Inject constructor(
     private val db: FirebaseFirestore
 ) {
-    fun getTodos(): Flow<List<Todo>> = callbackFlow {
-        val listener = db.collection("todos")
+    fun getTodos(userID: String): Flow<List<Todo>> = callbackFlow {
+        val listener = db.collection("todos").whereEqualTo("userID", userID)
             .addSnapshotListener { snapshot, error ->
                 if (error != null) {
                     println("Error fetching todos: $error")

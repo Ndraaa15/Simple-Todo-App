@@ -39,6 +39,10 @@ fun SignUpScreen(navController: NavController) {
             .padding(16.dp),
         verticalArrangement = Arrangement.Center
     ) {
+        Text(
+            text = "Sign Up",
+            style = MaterialTheme.typography.headlineLarge
+        )
         TextField(
             value = name,
             onValueChange = { name = it },
